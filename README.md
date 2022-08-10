@@ -1,70 +1,92 @@
-# Getting Started with Create React App
+# Dao Interface 👋
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">
+<!--<a href="">
+<img src="images/market.png" align="center" width="70%">
+</a> -->
+<br><br>
+     DAO Interface
+    <br><br>
+  <a href="https://www.npmjs.com/package/react">
+    <img alt="npm" src="https://img.shields.io/badge/npm-8.8.0-green.svg" />
+  </a>
+  <a href="#">
+    <img alt="License" src="https://img.shields.io/badge/License-MIT-orange.svg" />
+  </a>
+  <br>
+    <br>
+    <a href="https://github.com/brenfondeadora/dao-interface/issues/new">Report bug</a>
+    ·
+    <a href="https://github.com/brenfondeadora/dao-interface/issues/new">Request feature</a>
+</p>
 
-## Available Scripts
+## 💻 Run Locally
 
-In the project directory, you can run:
+**Step 1:**
 
-### `npm start`
+Install dependencies `yarn install`
 
-Runs the app in the development mode.\
+**Step 2:**
+
+Run the app on localhost with `yarn start`
+
+**Step 3:**
+
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+**Step 4:**
 
-### `npm test`
+To create build files `yarn build`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<br>
 
-### `npm run build`
+## 🤳 Requirements
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+* [Metamask](https://metamask.io/)
+* [testnet LINK](https://faucets.chain.link/rinkeby)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<br>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🚀 Upload file to IPFS
 
-### `npm run eject`
+**Step 1:**
+Create Hash to upload to IPFS `sh ./deploy.sh` <br>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+**Step 2:**
+Copy hash created 
+```
+{"Name":"","Hash":"bafybeigpvpjruacgbc2q3pqzgmq5rkc6wl4gfc5nzcne4l6ogd4pg23sp4","Size":"10214721"}
+* Closing connection 0
+* TLSv1.2 (IN), TLS alert, close notify (256):
+* TLSv1.2 (OUT), TLS alert, close notify (256):
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+**Step 3:**
+Use any url of the [public gateway](https://ipfs.github.io/public-gateway-checker/) and copy the hash and put in in the beggining to test
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+[https://bafybeigpvpjruacgbc2q3pqzgmq5rkc6wl4gfc5nzcne4l6ogd4pg23sp4.ipfs.dweb.link/#/]
+[https://bafybeigpvpjruacgbc2q3pqzgmq5rkc6wl4gfc5nzcne4l6ogd4pg23sp4.ipfs.cf-ipfs.com/#/]
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+<br>
 
-## Learn More
+## ✨ TODO
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- [ ] Tests
+- [ ] Design Changes
+- [ ] Link to OpenSea
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<br>
 
-### Code Splitting
+## 👤 Author
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+**Brenda Saavedra**
 
-### Analyzing the Bundle Size
+- Twitter: [@brsaca](https://twitter.com/brsaca)
+- Github: [@brenfondeadora](https://github.com/brenfondeadora/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+<br>
 
-### Making a Progressive Web App
+## 📝 License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Copyright © 2022 [Brenda Saavedra](https://github.com/brenfondeadora).<br />
+This project is [MIT License](LICENSE)
