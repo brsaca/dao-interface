@@ -20,6 +20,21 @@
     <a href="https://github.com/brenfondeadora/dao-interface/issues/new">Request feature</a>
 </p>
 
+<p align="center">
+<a href="https://mumbai.polygonscan.com/">
+  <img src="images/polygon.png" align="center" width="15%" >
+</a> 
+<a href="https://www.alchemy.com/">
+  <img src="images/alchemy.png" align="center" width="10%" >
+</a> 
+<a href="https://moralis.io/">
+<img src="images/moralis.png" align="center" width="10%">
+</a>  
+<a href="https://www.netlify.com/">
+<img src="images/netlify.png" align="center" width="10%">
+</a> 
+</p>
+
 ## 💻 Run Locally
 
 **Step 1:**
@@ -92,4 +107,4 @@ Copyright © 2022 [Brenda Saavedra](https://github.com/brenfondeadora).<br />
 This project is [MIT License](LICENSE)
 
 
-https://youtu.be/sAcEJcwPTOk?t=2319
+https://youtu.be/sAcEJcwPTOk?t=4401
