@@ -13,24 +13,34 @@ const Home = () => {
   const [proposals, setProposals] = useState();
   const Web3Api = useMoralisWeb3Api();
 
-  async function getStatus(proposalId) {
-    const ProposalCounts = Moralis.Object.extend("ProposalTotalCounts");
-    const query = new Moralis.Query(ProposalCounts);
-    query.equalTo("uid", proposalId);
-    const result = await query.first();
-    if(result !== undefined){
-      if(result.attributes.passed){
-        return { color: "green", text: "Passed" };
-      }else{
-        return { color: "red", text: "Rejected" };
-      }
-    }else{
-      return { color: "blue", text: "Ongoing" };
-    }
-  }
+
+  //TODO: bsc: move to callback
+  /*
+  const setDefaultState = useCallback((data) => {
+  let names = getNameList(data);
+  setSelectedItems(names);
+}, [getNameList, setSelectedNames])
+  */
+  
 
   useEffect(() => {
     if(isInitialized) {
+
+      async function getStatus(proposalId) {
+        const ProposalCounts = Moralis.Object.extend("ProposalTotalCounts");
+        const query = new Moralis.Query(ProposalCounts);
+        query.equalTo("uid", proposalId);
+        const result = await query.first();
+        if(result !== undefined){
+          if(result.attributes.passed){
+            return { color: "green", text: "Passed" };
+          }else{
+            return { color: "red", text: "Rejected" };
+          }
+        }else{
+          return { color: "blue", text: "Ongoing" };
+        }
+      } 
       
       async function getProposals(){
         const Proposals = Moralis.Object.extend("AllProposals");
@@ -92,7 +102,7 @@ const Home = () => {
       fetchTokenIdOwners();
 
     }
-  }, [isInitialized]);
+  }, [isInitialized, Moralis.Object, Moralis.Query, Web3Api.token]);
 
 
   return (
