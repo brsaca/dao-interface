@@ -91,5 +91,3 @@ To create build files `yarn build`
 Copyright © 2022 [Brenda Saavedra](https://github.com/brenfondeadora).<br />
 This project is [MIT License](LICENSE)
 
-
-https://youtu.be/sAcEJcwPTOk?t=4918
