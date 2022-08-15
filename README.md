@@ -1,11 +1,13 @@
 # Dao Interface 👋
 
+Based on youtube tutorial [Build Your Own DAO - Web3 Programming with Solidity, Hardhat, Moralis, React, Full-Stack Dapp](https://www.youtube.com/watch?v=sAcEJcwPTOk)
+
 <p align="center">
-<!--<a href="">
-<img src="images/market.png" align="center" width="70%">
-</a> -->
+<a href="https://ancient-dew-1659.on.fleek.co">
+<img src="images/dao.png" align="center" width="50%">
+</a> 
 <br><br>
-     DAO Interface
+     DAO
     <br><br>
   <a href="https://www.npmjs.com/package/react">
     <img alt="npm" src="https://img.shields.io/badge/npm-8.8.0-green.svg" />
@@ -30,8 +32,8 @@
 <a href="https://moralis.io/">
 <img src="images/moralis.png" align="center" width="10%">
 </a>  
-<a href="https://www.netlify.com/">
-<img src="images/netlify.png" align="center" width="10%">
+<a href="https://fleek.co/">
+<img src="images/fleek.png" align="center" width="7%">
 </a> 
 </p>
 
@@ -55,40 +57,21 @@ To create build files `yarn build`
 
 <br>
 
-## 🤳 Requirements
+## 🤳 References
 
-* [Metamask](https://metamask.io/)
-* [testnet LINK](https://faucets.chain.link/rinkeby)
-
-<br>
-
-## 🚀 Upload file to IPFS
-
-**Step 1:**
-Create Hash to upload to IPFS `sh ./deploy.sh` <br>
-
-**Step 2:**
-Copy hash created 
-```
-{"Name":"","Hash":"bafybeigpvpjruacgbc2q3pqzgmq5rkc6wl4gfc5nzcne4l6ogd4pg23sp4","Size":"10214721"}
-* Closing connection 0
-* TLSv1.2 (IN), TLS alert, close notify (256):
-* TLSv1.2 (OUT), TLS alert, close notify (256):
-```
-
-**Step 3:**
-Use any url of the [public gateway](https://ipfs.github.io/public-gateway-checker/) and copy the hash and put in in the beggining to test
-
-[https://bafybeigpvpjruacgbc2q3pqzgmq5rkc6wl4gfc5nzcne4l6ogd4pg23sp4.ipfs.dweb.link/#/]
-[https://bafybeigpvpjruacgbc2q3pqzgmq5rkc6wl4gfc5nzcne4l6ogd4pg23sp4.ipfs.cf-ipfs.com/#/]
+* [Metamask](https://metamask.io/): wallet
+* [FREE MATIC](https://faucet.polygon.technology/): get free matic for test on mumbai polygon network
+* [Polygon Scan](https://mumbai.polygonscan.com/address/0x97bCdEe203377ee5229833D71bA00502A1604498): verify transaction on mumbai network
+* [Alchemy](https://fleek.co/): allow to connect to polygon network
+* [Fleek](https://fleek.co/): build and upload project to IPFS 
 
 <br>
 
 ## ✨ TODO
 
 - [ ] Tests
-- [ ] Design Changes
-- [ ] Link to OpenSea
+- [ ] Change to one week the available time for voting
+- [ ] Add the option to count votes on UI
 
 <br>
 
@@ -96,7 +79,7 @@ Use any url of the [public gateway](https://ipfs.github.io/public-gateway-checke
 
 **Brenda Saavedra**
 
-- Twitter: [@brsaca](https://twitter.com/brsaca)
+- WebPage: [brendasaavedra.com](http://brendasaavedra.com)
 - Github: [@brenfondeadora](https://github.com/brenfondeadora/)
 
 <br>
@@ -107,4 +90,4 @@ Copyright © 2022 [Brenda Saavedra](https://github.com/brenfondeadora).<br />
 This project is [MIT License](LICENSE)
 
 
-https://youtu.be/sAcEJcwPTOk?t=4401
+https://youtu.be/sAcEJcwPTOk?t=4918
