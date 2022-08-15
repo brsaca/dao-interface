@@ -3,7 +3,7 @@ import "./pages.css";
 import { Widget, Tag, Blockie, Tooltip, Icon, Form, Table } from "web3uikit";
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router";
-import { useMoralis } from "react-moralis";
+import { useMoralis, useWeb3ExecuteFunction } from "react-moralis";
 
 const Proposal = () => {
 
@@ -13,10 +13,8 @@ const Proposal = () => {
   const [percUp, setPercUp] = useState(0);
   const [percDown, setPercDown] = useState(0);
   const [votes, setVotes] = useState([]);
-
-  const onSubmit = () => {
-    alert('Vote cast');
-  }
+  const [sub, setSub] = useState(false);
+  const contractProcessor = useWeb3ExecuteFunction();
 
   useEffect(() => {
     if(isInitialized){
@@ -64,6 +62,49 @@ const Proposal = () => {
 
     }
   }, [isInitialized, proposalDetail, Moralis.Object, Moralis.Query])
+
+  async function castVote(upDown) {
+    let options = {
+      contractAddress: "0x97bCdEe203377ee5229833D71bA00502A1604498",
+      functionName: "voteOnProposal",
+      abi: [
+        { 
+          inputs:[
+            {
+              internalType:"uint256",
+              name:"_proposalId",
+              type:"uint256"
+            },
+            {
+              internalType:"bool",
+              name:"_vote",
+              type:"bool"
+            }
+          ],
+          name:"voteOnProposal",
+          outputs:[],
+          stateMutability:"nonpayable",
+          type:"function"
+        },
+      ],
+      params: {
+        _proposalId: proposalDetail.id,
+        _vote: upDown,
+      },
+    };
+
+    await contractProcessor.fetch({
+      params: options,
+      onSuccess: () => {
+        alert("Vote Cast Successfully");
+        setSub(false);
+      },
+      onError: (error) => {
+        alert(error.data.message);
+        setSub(false);
+      }
+    });
+  }
 
   return (
     <>
@@ -134,7 +175,7 @@ const Proposal = () => {
               border: "1px solid rgba(6, 158, 252, 0.2)",
             }}
             buttonConfig={{
-              isLoading: false,
+              isLoading: sub,
               loadingText: "Casting Vote",
               text: "Vote",
               theme: "secondary",
@@ -150,7 +191,15 @@ const Proposal = () => {
                 },
               },
             ]}
-            onSubmit={onSubmit}
+            onSubmit={(e) => {
+              if(e.data[0].inputResult[0] === "For"){
+                castVote(true);
+              }else{
+                castVote(false);
+              }
+              setSub(true);
+            }}
+            title="Cast Vote"
           />
         </div>
      </div>
