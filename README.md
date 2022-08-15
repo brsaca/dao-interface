@@ -22,6 +22,8 @@ Based on youtube tutorial [Build Your Own DAO - Web3 Programming with Solidity, 
     <a href="https://github.com/brenfondeadora/dao-interface/issues/new">Request feature</a>
 </p>
 
+This project works on mumbain polygon network, and for the hability to vote and create proposals, you need to have a special NFT, created on [openSea Testnets](https://testnets.opensea.io/)
+
 <p align="center">
 <a href="https://mumbai.polygonscan.com/">
   <img src="images/polygon.png" align="center" width="15%" >
